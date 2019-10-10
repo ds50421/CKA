@@ -6,4 +6,4 @@ spec:
   containers:
   -  image: nginx
      name: nginx
-  nodeName: node01
+  nodeName: node01                       #nodeName helps to assign pod to right node after its created
