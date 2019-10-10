@@ -1,0 +1,20 @@
+kubectl taint nodes master node-role.kubernetes.io/master:NoSchedule-    #No taints to master or remove taint from master node
+kubectl taint nodes node01 spray=mortein:NoSchedule                      #create taint on node01 with key,value,effect,operator
+
+#create pod with tolerations to taint on node
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bee
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  tolerations:
+  - key: "spray"
+    operator: "Equal"
+    effect: "NoSchedule"
+    value: "mortein"
