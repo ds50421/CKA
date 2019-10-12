@@ -1,0 +1,4 @@
+kubectl get daemonsets --all-namespaces                   #Get all daemonsets in all namespaces
+kubectl describe daemonsets kube-proxy --namespace=kube-system  #Get daemonsets from one namespace
+kubectl describe daemonset weave-net --namespace=kube-system  #get all details on daemonset related to one namespace
+
