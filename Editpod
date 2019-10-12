@@ -1,0 +1,14 @@
+kubectl edit pod <pod name>              #edit pod
+Pod will be saved in tmp file
+kubectl delete pod <pod name>
+kubectl create -f /tmp/kubectl-edit-ccvrq.yaml
+
+
+
+kubectl get pod webapp -o yaml > my-new-pod.yaml
+vi my-new-pod.yaml
+kubectl delete pod webapp
+kubectl create -f my-new-pod.yaml
+
+
+kubectl edit deployment my-deployment    #With Deployments you can easily edit any field/property of the POD template. Since the pod template is a child of the deployment specification,  with every change the deployment will automatically delete and create a new pod with the new changes. So if you are asked to edit a property of a POD part of a deployment you may do that simply by running the command
