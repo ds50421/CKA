@@ -1,0 +1,2 @@
+/var/lib/kubelet/config.yaml        #path for static pod definition yaml file "staticPodPath"(give the location of file) OR
+/etc/kubernetes/manifests
