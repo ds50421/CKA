@@ -1,0 +1,1 @@
+kubectl exec -it app cat /log/app.log                #checking logs from app.log
