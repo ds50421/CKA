@@ -1,0 +1,4 @@
+apt install kubeadm=1.12.0-00              #install latest kubeadm
+
+kubeadm upgrade apply v1.12.0              # apply upgrade
+apt install kubelet=1.12.0-00              # install kubelet
