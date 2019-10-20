@@ -1,0 +1,4 @@
+kubectl get csr agent-smith -o yaml                       #get certificate request in yaml format
+kubectl certificate deny agent-smith                    # reject request from user
+kubectl delete csr agent-smith                          # delete request from user
+kubectl get csr                                         # get all csr request
