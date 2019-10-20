@@ -2,3 +2,4 @@ kubectl get csr agent-smith -o yaml                       #get certificate reque
 kubectl certificate deny agent-smith                    # reject request from user
 kubectl delete csr agent-smith                          # delete request from user
 kubectl get csr                                         # get all csr request
+kubectl config --kubeconfig=/root/my-kube-config use-context research  #get details of NOT default config file
