@@ -1,0 +1,5 @@
+kubectl describe pod kube-apiserver-master -n kube-system   #identify the authorization modes configured on the cluster.
+kubectl describe role weave-net  -n kube-system   # get role details and access details
+kubectl describe rolebinding weave-net -n kube-system  #which account role is assigned
+kubectl auth can-i delete nodes  #testing other users access
+kubectl get pods --as -dev-user  #check if user can view pods
