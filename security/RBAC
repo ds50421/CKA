@@ -6,3 +6,4 @@ kubectl get pods --as -dev-user  #check if user can view pods
 kubectl get rolebindings -o yaml -n blue    #
 kubectl describe role weave-net -n kube-system    #descibe role in a nampespace
 kubectl describe pod kube-apiserver-master -n kube-system  #Describe kubeapiserver in nampespace
+kubectl api-resources -o wide   #gets name of resources with name and kind
