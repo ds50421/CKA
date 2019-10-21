@@ -3,3 +3,6 @@ kubectl describe role weave-net  -n kube-system   # get role details and access 
 kubectl describe rolebinding weave-net -n kube-system  #which account role is assigned
 kubectl auth can-i delete nodes  #testing other users access
 kubectl get pods --as -dev-user  #check if user can view pods
+kubectl get rolebindings -o yaml -n blue    #
+kubectl describe role weave-net -n kube-system    #descibe role in a nampespace
+kubectl describe pod kube-apiserver-master -n kube-system  #Describe kubeapiserver in nampespace
