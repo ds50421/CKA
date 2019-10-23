@@ -1,0 +1,8 @@
+ ip link                                       #gets all netwrok interfaces
+   ip addr                                     # gets all ip address with interface
+    kubectl get nodes -o  wide                 # get ip address of all nodes
+    arp node02                                 #get mac address of all nodes
+    ip link show | grep docker                 # get all details of docker bridge with status
+    ip route show default                      # show routing tables
+    netstat -nplt                              # shows process/services with pid with ports
+    netstat -anp | grep etcd                   # shows etc is listening on port
