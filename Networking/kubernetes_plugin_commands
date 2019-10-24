@@ -1,0 +1,9 @@
+ls /opt/cni/bin          #plugins is available in the list of available CNI plugins on this host
+bridge  dhcp  flannel  host-device  host-local  ipvlan  loopback  macvlan  portmap  ptp  sample  tuning  vlan  weave-ipam  weave-net  weave-plugin-2.5.1
+
+
+ps -aux | grep kubelet    # identify the network plugin configured for Kubernetes.
+root      2353  3.7  4.4 860156 91292 ?        Ssl  10:46   0:11 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --cgroup-driver=systemd --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.1
+
+ls /etc/cni/net.d/   #CNI plugin configured to be used on this kubernetes cluster
+/etc/cni/net.d/10-weave.conf       #What binary executable file will be run by kubelet after a container and its associated namespace are created.
