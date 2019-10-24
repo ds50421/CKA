@@ -7,3 +7,6 @@ root      2353  3.7  4.4 860156 91292 ?        Ssl  10:46   0:11 /usr/bin/kubele
 
 ls /etc/cni/net.d/   #CNI plugin configured to be used on this kubernetes cluster
 /etc/cni/net.d/10-weave.conf       #What binary executable file will be run by kubelet after a container and its associated namespace are created.
+
+
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"      #install weave-net solution of cluster
