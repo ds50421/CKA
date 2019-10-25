@@ -7,3 +7,4 @@
     netstat -nplt                              # shows process/services with pid with ports
     netstat -anp | grep etcd                   # shows etc is listening on port
     kubectl exec coredns-78fcdf6894-dvpj5 -n kube-system ps   #get config of coredns
+kubectl exec -it hr nslookup mysql.payroll > /root/nslookup.out       # From the hr pod nslookup the mysql service and redirect the output to a file /root/nslookup.out
