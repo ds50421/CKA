@@ -1,0 +1,2 @@
+kubectl get ingresses --all-namespaces    #namespace is the Ingress Resource deployed in
+kubectl edit ingress --namespace app-space   # edit ingress resources
