@@ -48,7 +48,8 @@ spec:
               
               
               
-    #create a service to make Ingress available to external users.
+    #Create the ingress resource to make the applications available at /wear and /watch on the Ingress service.
+Create the ingress in the app-space.
 
 
 ---
@@ -71,3 +72,27 @@ spec:
     name: https
   selector:
     name: nginx-ingress
+    
+    
+    #Create ingress
+    
+    apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-wear-watch
+  namespace: app-space
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /wear
+        backend:
+          serviceName: wear-service
+          servicePort: 8080
+      - path: /watch
+        backend:
+          serviceName: video-service
+         vim advaith.yaml^Cers/ingress-resource.yaml
