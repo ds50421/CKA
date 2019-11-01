@@ -1,0 +1,16 @@
+kubectl get pv --sort-by=.spec.capacity.storage -o custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity.storage
+
+
+#Afetr query
+NAME       CAPACITY
+pv-log-4   40Mi
+pv-log-1   100Mi
+pv-log-2   200Mi
+pv-log-3   300Mi
+
+#before query
+NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM     STORAGECLASS   REASON    AGE
+pv-log-1   100Mi      RWX            Retain           Available                                      49m
+pv-log-2   200Mi      RWX            Retain           Available                                      49m
+pv-log-3   300Mi      RWX            Retain           Available                                      49m
+pv-log-4   40Mi       RWX            Retain           Available                                      49m
