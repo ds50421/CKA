@@ -1,0 +1,2 @@
+kubectl get pod --selector env=prod,bu=finance,tier=frontend    #POD which is 'prod', part of 'finance' BU and is a 'frontend' tier
+kubectl get pod --selector env=prod,bu=finance,tier!=frontend   #Not operator
